@@ -1,0 +1,96 @@
+# ============================================================
+# ClockTogether — .gitignore
+# ============================================================
+# Anything matched here will NOT be committed to GitHub.
+# When in doubt, add it here BEFORE the first push that would
+# expose it — Git history is forever.
+# ============================================================
+
+# ----- Secrets and config (Phase 2 — never commit these) -----
+config.php
+config.local.php
+.env
+.env.*
+*.env
+secrets.json
+credentials.json
+*.pem
+*.key
+
+# ----- PHP backend (Phase 2) -----
+vendor/                 # Composer dependencies
+composer.lock           # Optional — some teams commit this, decide with your contractor
+
+# ----- Node / build tooling (if ever added) -----
+node_modules/
+package-lock.json       # Optional — see above
+yarn.lock
+.npm/
+.yarn/
+
+# ----- Logs -----
+*.log
+error_log
+access_log
+logs/
+
+# ----- Database -----
+*.sql.bak
+*.dump
+database.sqlite
+*.db
+
+# ----- Cache and temporary files -----
+cache/
+tmp/
+temp/
+*.tmp
+*.cache
+
+# ----- World atlas (if hosted locally per DEPLOY.md) -----
+countries-110m.json
+
+# ----- OS-generated junk -----
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ----- Editor / IDE files -----
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.settings/
+*.sublime-project
+*.sublime-workspace
+.history/
+
+# ----- Backup files (the str_replace pattern, etc.) -----
+*.bak
+*.backup
+*.orig
+*.rej
+
+# ----- Test outputs -----
+coverage/
+.nyc_output/
+*.lcov
+
+# ----- Local Speed Reaper / cPanel artefacts -----
+.htaccess.backup
+public_html_backup/
+cgi-bin/
+
+# ----- Misc -----
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.rar
